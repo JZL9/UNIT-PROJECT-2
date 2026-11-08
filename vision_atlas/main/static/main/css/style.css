@@ -1,0 +1,12 @@
+:root {
+    --va-green: #006c35;
+}
+
+.navbar-brand {
+    color: var(--va-green) !important;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-weight: 700;
+}
