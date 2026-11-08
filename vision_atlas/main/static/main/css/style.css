@@ -10,3 +10,7 @@
 h1 {
     font-weight: 700;
 }
+
+[data-bs-theme="dark"] .navbar-brand {
+    color: #3ddc84 !important;
+}
