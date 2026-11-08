@@ -3,6 +3,8 @@ from pathlib import Path
 
 from django.http import Http404
 from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.utils.http import url_has_allowed_host_and_scheme
 
 
 # Create your views here.
@@ -22,3 +24,17 @@ def project_detail(request, slug):
     if project is None:
         raise Http404("Project not found")
     return render(request, 'main/project_detail.html', {'project': project})
+
+
+def set_theme(request):
+    theme = request.GET.get('theme', 'light')
+    if theme not in ('light', 'dark'):
+        theme = 'light'
+
+    next_url = request.GET.get('next', '/')
+    if not url_has_allowed_host_and_scheme(next_url, allowed_hosts={request.get_host()}):
+        next_url = '/'
+
+    response = redirect(next_url)
+    response.set_cookie('theme', theme, max_age=60 * 60 * 24 * 365)
+    return response

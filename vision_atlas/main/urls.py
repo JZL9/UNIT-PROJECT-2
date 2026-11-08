@@ -6,4 +6,5 @@ app_name = 'main'
 urlpatterns = [
     path('', views.home, name='home'),
     path('project/<slug:slug>/',views.project_detail, name='project_detail'),
+    path('theme/', views.set_theme, name='set_theme'),
 ]
