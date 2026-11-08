@@ -1,0 +1,12 @@
+{
+    "neom": {
+        "name": "NEOM",
+        "tagline": "A land of the future, built from scratch.",
+        "about": "NEOM is a giga-project in northwest Saudi Arabia on the Red Sea coast."
+    },
+    "red-sea": {
+        "name": "The Red Sea",
+        "tagline": "Luxury tourism that protects nature.",
+        "about": "A regenerative tourism destination across islands on the west coast."
+    }
+}

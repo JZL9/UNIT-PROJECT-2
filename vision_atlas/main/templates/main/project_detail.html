@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ project.name }} | Vision Atlas{% endblock %}
+
+{% block content %}
+    <h1>{{ project.name }}</h1>
+    <p class="lead">{{ project.tagline }}</p>
+    <p>{{ project.about }}</p>
+    <a href="{% url 'main:home' %}" class="btn btn-outline-success">Back to Home</a>
+{% endblock %}
