@@ -46,12 +46,25 @@
     </div>
 </section>
 
-<div class="container my-5" id="projects">
-    <ul>
+<section class="section container" id="projects">
+    <p class="section-label">02 — Giga-Projects</p>
+    <h2 class="section-title mb-5">Explore the Projects</h2>
+
+    <div class="row g-4">
         {% for slug, project in projects.items %}
-            <li><a href="{% url 'main:project_detail' slug %}">{{ project.name }}</a></li>
+            <div class="col-md-6 col-lg-4 reveal">
+                <a href="{% url 'main:project_detail' slug %}" class="project-card">
+                    <img src="{% static project.images.0 %}" alt="{{ project.name }}" loading="lazy">
+                    <div class="project-card-content">
+                        <span class="slide-num">{{ forloop.counter|stringformat:"02d" }}</span>
+                        <h3>{{ project.name }}</h3>
+                        <p>{{ project.tagline }}</p>
+                        <span class="project-card-link">Explore <i class="bi bi-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
         {% endfor %}
-    </ul>
-</div>
+    </div>
+</section>
 
 {% endblock %}
