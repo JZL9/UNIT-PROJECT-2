@@ -1,19 +1,57 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}Home | Vision Atlas{% endblock %}
+{% block title %}Vision Atlas | Saudi Vision 2030{% endblock %}
+{% block body_class %}has-hero{% endblock %}
 
 {% block content %}
-<div class="container my-5">
-    <h1>Saudi Vision 2030</h1>
-    <p>Discover the giga-projects shaping the future of the Kingdom.</p>
 
-    <ul id="projects">
+<section class="hero">
+    <video class="hero-media" autoplay muted loop playsinline poster="{% static 'main/images/home-1.png' %}">
+        <source src="{% static 'main/images/home-video-5.mp4' %}" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <p class="eyebrow">Kingdom of Saudi Arabia</p>
+        <h1 class="hero-title">Vision<br>2030</h1>
+        <p class="hero-tagline">Explore the giga-projects shaping the future of the Kingdom.</p>
+        <a href="#projects" class="btn btn-light btn-lg rounded-pill px-4 mt-3">
+            Explore Projects <i class="bi bi-arrow-down ms-1"></i>
+        </a>
+    </div>
+
+    <div class="hero-stats">
+        <div class="container d-flex flex-wrap gap-4 gap-lg-5">
+            <div><span class="stat-value">6</span><span class="stat-label">Giga-Projects</span></div>
+            <div><span class="stat-value">2016</span><span class="stat-label">Vision Launched</span></div>
+            <div><span class="stat-value">2030</span><span class="stat-label">Target Year</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="section container">
+    <div class="row g-5 align-items-center">
+        <div class="col-lg-6 reveal">
+            <p class="section-label">01 — The Vision</p>
+            <h2 class="section-title mb-4">A Nation Building Its Future</h2>
+            <p class="lead-text">Saudi Vision 2030 was launched in 2016 by Crown Prince Mohammed bin Salman as a roadmap to transform the Kingdom.</p>
+            <p class="story-text">Its goal is to diversify the economy beyond oil, open the country to the world, and improve the quality of life for every citizen. At the center of this plan are giga-projects: entire cities, destinations and communities built from the ground up to show what the future of Saudi Arabia can look like.</p>
+        </div>
+        <div class="col-lg-6 reveal">
+            <div class="feature-img">
+                <img src="{% static 'main/images/home-2.png' %}" alt="Saudi Vision 2030" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container my-5" id="projects">
+    <ul>
         {% for slug, project in projects.items %}
-            <li>
-                <a href="{% url 'main:project_detail' slug %}">{{ project.name }}</a>
-            </li>
+            <li><a href="{% url 'main:project_detail' slug %}">{{ project.name }}</a></li>
         {% endfor %}
     </ul>
 </div>
+
 {% endblock %}
