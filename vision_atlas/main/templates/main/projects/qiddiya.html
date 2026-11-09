@@ -1,1 +1,42 @@
 {% extends 'main/project_base.html' %}
+{% load static %}
+
+{% block about %}
+<section class="section container">
+    <p class="section-label">01 — The Story</p>
+    <h2 class="section-title mb-4">About Qiddiya</h2>
+    <p class="lead-text mb-5">{{ project.about }}</p>
+
+    <div class="scrolly">
+        <div class="scrolly-media">
+            <img class="scrolly-img active" data-step="0" src="{% static 'main/images/qiddiya/qiddiya-1.png' %}" alt="Qiddiya city at night">
+            <img class="scrolly-img" data-step="1" src="{% static 'main/images/qiddiya/qiddiya-2.png' %}" alt="Qiddiya theme park">
+            <img class="scrolly-img" data-step="2" src="{% static 'main/images/qiddiya/qiddiya-3.png' %}" alt="Aquarabia water park">
+            <img class="scrolly-img" data-step="3" src="{% static 'main/images/qiddiya/qiddiya-4.jpg' %}" alt="Gaming and esports district">
+        </div>
+
+        <div class="scrolly-steps">
+            <article class="scrolly-step" data-step="0">
+                <span class="chapter">Chapter 01</span>
+                <h3 class="story-title">The Capital of Entertainment</h3>
+                <p class="story-text">Qiddiya was announced in 2017 as a new city dedicated to entertainment, sports and culture. Built on the edge of the Tuwaiq cliffs, just outside Riyadh, it is developed by Qiddiya Investment Company, owned by the Public Investment Fund.</p>
+            </article>
+            <article class="scrolly-step" data-step="1">
+                <span class="chapter">Chapter 02</span>
+                <h3 class="story-title">Rides That Break Records</h3>
+                <p class="story-text">At its heart is Six Flags Qiddiya City, a theme park with rides designed to set world records for speed and height, including a roller coaster that launches riders off the edge of the cliff.</p>
+            </article>
+            <article class="scrolly-step" data-step="2">
+                <span class="chapter">Chapter 03</span>
+                <h3 class="story-title">A Water Park in the Desert</h3>
+                <p class="story-text">Aquarabia brings huge slides, wave pools and family attractions to the heart of the desert, offering a cool escape for visitors all year round.</p>
+            </article>
+            <article class="scrolly-step" data-step="3">
+                <span class="chapter">Chapter 04</span>
+                <h3 class="story-title">Sports, Speed and Gaming</h3>
+                <p class="story-text">Qiddiya also plans a motorsport track built into the cliffs, a major stadium overlooking the valley, and a district dedicated to gaming and esports, making it a home for fans of every kind.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
