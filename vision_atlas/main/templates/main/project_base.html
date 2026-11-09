@@ -51,24 +51,49 @@
 {% endblock %}
 
 {% block attractions %}
-<section class="section container">
-    <p class="section-label">02 — Highlights</p>
-    <h2 class="section-title mb-5">Top Attractions</h2>
+<section class="section">
+    <div class="container d-flex justify-content-between align-items-end mb-5">
+        <div>
+            <p class="section-label">02 — Highlights</p>
+            <h2 class="section-title mb-0">Top Attractions</h2>
+        </div>
+        <div class="d-none d-md-flex d-lg-none gap-2">
+            <button class="slider-btn" type="button" data-dir="-1" aria-label="Previous"><i class="bi bi-arrow-left"></i></button>
+            <button class="slider-btn" type="button" data-dir="1" aria-label="Next"><i class="bi bi-arrow-right"></i></button>
+        </div>
+    </div>
 
-    {% for place in project.attractions %}
-        <div class="row align-items-center g-4 g-lg-5 feature reveal {% if forloop.counter|divisibleby:2 %}flex-lg-row-reverse{% endif %}">
-            <div class="col-lg-7">
-                <div class="feature-img">
-                    <img src="{% static place.image %}" alt="{{ place.name }}" loading="lazy">
+    <!-- Desktop: zigzag -->
+    <div class="container d-none d-lg-block">
+        {% for place in project.attractions %}
+            <div class="row align-items-center g-5 feature reveal {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
+                <div class="col-lg-7">
+                    <div class="feature-img">
+                        <img src="{% static place.image %}" alt="{{ place.name }}" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <span class="feature-num">{{ forloop.counter|stringformat:"02d" }}</span>
+                    <h3 class="feature-title">{{ place.name }}</h3>
+                    <p class="text-body-secondary fs-5">{{ place.desc }}</p>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <span class="feature-num">{{ forloop.counter|stringformat:"02d" }}</span>
-                <h3 class="feature-title">{{ place.name }}</h3>
-                <p class="text-body-secondary fs-5">{{ place.desc }}</p>
-            </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
+
+    <!-- Mobile and tablet: slider -->
+    <div class="slider d-lg-none">
+        {% for place in project.attractions %}
+            <article class="slide">
+                <img src="{% static place.image %}" alt="{{ place.name }}" loading="lazy">
+                <div class="slide-content">
+                    <span class="slide-num">{{ forloop.counter|stringformat:"02d" }}</span>
+                    <h3>{{ place.name }}</h3>
+                    <p>{{ place.desc }}</p>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
 </section>
 {% endblock %}
 

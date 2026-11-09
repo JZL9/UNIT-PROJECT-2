@@ -69,3 +69,14 @@ function updateProgress() {
 
 updateProgress();
 window.addEventListener('scroll', updateProgress);
+
+const slider = document.querySelector('.slider');
+
+if (slider) {
+    document.querySelectorAll('.slider-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const step = slider.querySelector('.slide').offsetWidth + 20;
+            slider.scrollBy({ left: step * Number(btn.dataset.dir) });
+        });
+    });
+}
