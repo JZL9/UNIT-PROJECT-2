@@ -1,1 +1,48 @@
 {% extends 'main/project_base.html' %}
+{% load static %}
+
+{% block about %}
+<section class="section container">
+    <p class="section-label">01 — The Story</p>
+    <h2 class="section-title mb-4">About ROSHN</h2>
+    <p class="lead-text mb-5">{{ project.about }}</p>
+
+    <div class="scrolly">
+        <div class="scrolly-media">
+            <img class="scrolly-img active" data-step="0" src="{% static 'main/images/roshn/roshn-6.png' %}" alt="ROSHN vision">
+            <img class="scrolly-img" data-step="1" src="{% static 'main/images/roshn/roshn-2.png' %}" alt="SEDRA community">
+            <img class="scrolly-img" data-step="2" src="{% static 'main/images/roshn/roshn-3.jpg' %}" alt="ROSHN neighborhood">
+            <img class="scrolly-img" data-step="3" src="{% static 'main/images/roshn/roshn-5.jpg' %}" alt="MARAFY waterfront">
+            <img class="scrolly-img" data-step="4" src="{% static 'main/images/roshn/roshn-4.png' %}" alt="ROSHN city view">
+        </div>
+
+        <div class="scrolly-steps">
+            <article class="scrolly-step" data-step="0">
+                <span class="chapter">Chapter 01</span>
+                <h3 class="story-title">Homes for a New Generation</h3>
+                <p class="story-text">ROSHN was launched in 2020 by the Public Investment Fund as a national real estate developer. Its mission supports a key Vision 2030 goal: helping more Saudi families own their homes.</p>
+            </article>
+            <article class="scrolly-step" data-step="1">
+                <span class="chapter">Chapter 02</span>
+                <h3 class="story-title">SEDRA, the First Community</h3>
+                <p class="story-text">SEDRA in north Riyadh was ROSHN's first community, built around green spaces, family homes and easy access to schools, mosques and shops.</p>
+            </article>
+            <article class="scrolly-step" data-step="2">
+                <span class="chapter">Chapter 03</span>
+                <h3 class="story-title">Designed for Everyday Life</h3>
+                <p class="story-text">Every ROSHN neighborhood is planned to be walkable, with parks, sports areas and daily services close to home, so families spend less time in cars and more time together.</p>
+            </article>
+            <article class="scrolly-step" data-step="3">
+                <span class="chapter">Chapter 04</span>
+                <h3 class="story-title">Living by the Water</h3>
+                <p class="story-text">In Jeddah, ROSHN is building coastal communities like ALAROUS and MARAFY, where homes sit along waterfronts and canals that bring the sea into the neighborhood.</p>
+            </article>
+            <article class="scrolly-step" data-step="4">
+                <span class="chapter">Chapter 05</span>
+                <h3 class="story-title">Beyond Real Estate</h3>
+                <p class="story-text">ROSHN's name is now part of Saudi sports too. Since 2023 it has been the title sponsor of the Saudi Pro League, known today as the ROSHN Saudi League.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
