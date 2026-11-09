@@ -35,3 +35,25 @@ if (steps.length) {
 
     steps.forEach((s) => stepObserver.observe(s));
 }
+
+
+document.querySelectorAll('.stat-value').forEach((el) => {
+    const match = el.textContent.trim().match(/^([\d,]+)(.*)$/);
+    if (!match) return;
+
+    const [, numberText, suffix] = match;
+    if (!numberText.includes(',') && !suffix) return;
+
+    const target = parseInt(numberText.replace(/,/g, ''), 10);
+    const start = performance.now();
+    const duration = 3500;
+
+    function tick(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(target * eased).toLocaleString('en-US') + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+});

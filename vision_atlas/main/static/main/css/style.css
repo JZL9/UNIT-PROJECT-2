@@ -164,6 +164,7 @@ h1, h2, h3, .navbar-brand {
     font-family: var(--font-display);
     font-size: 1.6rem;
     font-weight: 700;
+    font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
@@ -488,3 +489,4 @@ h1, h2, h3, .navbar-brand {
         min-height: 60vh;
     }
 }
+
