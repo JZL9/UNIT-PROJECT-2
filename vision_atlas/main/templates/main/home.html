@@ -4,14 +4,16 @@
 {% block title %}Home | Vision Atlas{% endblock %}
 
 {% block content %}
+<div class="container my-5">
     <h1>Saudi Vision 2030</h1>
     <p>Discover the giga-projects shaping the future of the Kingdom.</p>
 
-    <ul id="Projects">
+    <ul id="projects">
         {% for slug, project in projects.items %}
             <li>
                 <a href="{% url 'main:project_detail' slug %}">{{ project.name }}</a>
             </li>
         {% endfor %}
     </ul>
+</div>
 {% endblock %}

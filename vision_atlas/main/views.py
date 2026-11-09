@@ -23,8 +23,15 @@ def project_detail(request, slug):
     project = PROJECTS.get(slug)
     if project is None:
         raise Http404("Project not found")
-    return render(request, 'main/project_detail.html', {'project': project})
 
+    slugs = list(PROJECTS)
+    next_slug = slugs[(slugs.index(slug) + 1) % len(slugs)]
+
+    return render(request, f'main/projects/{slug}.html', {
+        'project': project,
+        'next_slug': next_slug,
+        'next_project': PROJECTS[next_slug],
+    })
 
 def set_theme(request):
     theme = request.GET.get('theme', 'light')
