@@ -1,1 +1,48 @@
 {% extends 'main/project_base.html' %}
+{% load static %}
+
+{% block about %}
+<section class="section container">
+    <p class="section-label">01 — The Story</p>
+    <h2 class="section-title mb-4">About The Red Sea</h2>
+    <p class="lead-text mb-5">{{ project.about }}</p>
+
+    <div class="scrolly">
+        <div class="scrolly-media">
+            <img class="scrolly-img active" data-step="0" src="{% static 'main/images/red-sea/red-sea-1.jpg' %}" alt="Red Sea resort">
+            <img class="scrolly-img" data-step="1" src="{% static 'main/images/red-sea/red-sea-2.jpg' %}" alt="Red Sea islands">
+            <img class="scrolly-img" data-step="2" src="{% static 'main/images/red-sea/red-sea-3.png' %}" alt="Mangroves">
+            <img class="scrolly-img" data-step="3" src="{% static 'main/images/red-sea/red-sea-5.png' %}" alt="Coral reefs">
+            <img class="scrolly-img" data-step="4" src="{% static 'main/images/red-sea/red-sea-4.png' %}" alt="Arriving at the Red Sea">
+        </div>
+
+        <div class="scrolly-steps">
+            <article class="scrolly-step" data-step="0">
+                <span class="chapter">Chapter 01</span>
+                <h3 class="story-title">A New Kind of Destination</h3>
+                <p class="story-text">The Red Sea project was announced in 2017 and is developed by Red Sea Global, a company owned by the Public Investment Fund. Its idea is simple but ambitious: luxury tourism that gives back to nature instead of taking from it.</p>
+            </article>
+            <article class="scrolly-step" data-step="1">
+                <span class="chapter">Chapter 02</span>
+                <h3 class="story-title">More Than 90 Islands</h3>
+                <p class="story-text">The destination stretches along Saudi Arabia's west coast and includes a huge lagoon with more than 90 untouched islands, along with desert dunes, dormant volcanoes and mountain canyons.</p>
+            </article>
+            <article class="scrolly-step" data-step="2">
+                <span class="chapter">Chapter 03</span>
+                <h3 class="story-title">Regenerative Tourism</h3>
+                <p class="story-text">Only a small part of the site is being developed, and most of the islands are left completely natural. Millions of mangrove trees are being planted along the coast to protect wildlife and capture carbon.</p>
+            </article>
+            <article class="scrolly-step" data-step="3">
+                <span class="chapter">Chapter 04</span>
+                <h3 class="story-title">One of the World's Richest Reefs</h3>
+                <p class="story-text">The coast is home to a large coral reef system known for its resilience to rising sea temperatures. It shelters turtles, dolphins and hundreds of fish species, making it a dream for divers and snorkelers.</p>
+            </article>
+            <article class="scrolly-step" data-step="4">
+                <span class="chapter">Chapter 05</span>
+                <h3 class="story-title">Open to the World</h3>
+                <p class="story-text">In 2023 the first resorts welcomed guests and Red Sea International Airport began operations. The whole destination is designed to run on renewable energy from the sun.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
