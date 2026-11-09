@@ -14,3 +14,14 @@ h1 {
 [data-bs-theme="dark"] .navbar-brand {
     color: #3ddc84 !important;
 }
+
+
+.gallery-img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.attraction-img {
+    height: 200px;
+    object-fit: cover;
+}

@@ -1,10 +1,92 @@
 {% extends 'main/base.html' %}
+{% load static %}
 
 {% block title %}{{ project.name }} | Vision Atlas{% endblock %}
 
 {% block content %}
-    <h1>{{ project.name }}</h1>
-    <p class="lead">{{ project.tagline }}</p>
-    <p>{{ project.about }}</p>
+    <h1 class="display-4">{{ project.name }}</h1>
+    <p class="lead mb-4">{{ project.tagline }}</p>
+
+    <!-- Gallery -->
+    <div id="gallery" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner rounded">
+            {% for img in project.images %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{% static img %}" class="d-block w-100 gallery-img" alt="{{ project.name }}">
+                </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#gallery" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#gallery" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- About + Stats -->
+    <div class="row g-4 mb-5">
+        <div class="col-lg-8">
+            <h2>About</h2>
+            <p>{{ project.about }}</p>
+        </div>
+        <div class="col-lg-4">
+            {% for stat in project.stats %}
+                <div class="card mb-2 text-center">
+                    <div class="card-body">
+                        <h3 class="text-success mb-0">{{ stat.value }}</h3>
+                        <small class="text-body-secondary">{{ stat.label }}</small>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Video -->
+    <h2>Video</h2>
+    <div class="ratio ratio-16x9 mb-5">
+        {% if project.youtube %}
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ project.youtube }}" allowfullscreen></iframe>
+        {% else %}
+            <video controls>
+                <source src="{% static project.video %}" type="video/mp4">
+            </video>
+        {% endif %}
+    </div>
+
+    <!-- Attractions -->
+    <h2>Top Attractions</h2>
+    <div class="row g-3 mb-5">
+        {% for place in project.attractions %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <img src="{% static place.image %}" class="card-img-top attraction-img" alt="{{ place.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ place.name }}</h5>
+                        <p class="card-text">{{ place.desc }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Timeline -->
+    <h2>Timeline</h2>
+    <ul class="list-group mb-5">
+        {% for item in project.timeline %}
+            <li class="list-group-item">
+                <strong class="text-success me-2">{{ item.year }}</strong> {{ item.event }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <!-- Events -->
+    <h2>Major Events</h2>
+    <ul class="mb-5">
+        {% for event in project.events %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+
     <a href="{% url 'main:home' %}" class="btn btn-outline-success">Back to Home</a>
 {% endblock %}

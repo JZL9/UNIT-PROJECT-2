@@ -2,11 +2,205 @@
     "neom": {
         "name": "NEOM",
         "tagline": "A land of the future, built from scratch.",
-        "about": "NEOM is a giga-project in northwest Saudi Arabia on the Red Sea coast."
+        "about": "NEOM is a giga-project in Tabuk Province, northwest Saudi Arabia, on the Red Sea and the Gulf of Aqaba. It brings together new cities, ports, tourism destinations and nature reserves under one vision.",
+        "images": [
+            "main/images/neom/the-line-3.jpg",
+            "main/images/neom/oxagon-2.jpg",
+            "main/images/neom/trojena-2.png",
+            "main/images/neom/islands-2.jpg",
+            "main/images/neom/nature-4.jpg",
+            "main/images/neom/history-1.jpg"
+        ],
+        "video": "main/images/neom/neom-video-2.mp4",
+        "youtube": "",
+        "stats": [
+            {"label": "Area", "value": "26,500 km²"},
+            {"label": "Announced", "value": "2017"},
+            {"label": "Region", "value": "Tabuk"}
+        ],
+        "attractions": [
+            {"name": "The Line", "desc": "A linear city with no cars or streets.", "image": "main/images/neom/the-line-1.jpg"},
+            {"name": "Oxagon", "desc": "A floating industrial port city.", "image": "main/images/neom/oxagon-1.jpeg"},
+            {"name": "Trojena", "desc": "A mountain destination with outdoor skiing.", "image": "main/images/neom/trojena-1.png"},
+            {"name": "Magna", "desc": "A coastal region along the Gulf of Aqaba.", "image": "main/images/neom/magna-1.png"},
+            {"name": "NEOM Islands", "desc": "Luxury islands in the Red Sea, starting with Sindalah.", "image": "main/images/neom/islands-1.png"},
+            {"name": "Nature in NEOM", "desc": "Protected reserves, deserts and coral reefs.", "image": "main/images/neom/nature-2.jpg"}
+        ],
+        "timeline": [
+            {"year": "2017", "event": "NEOM announced at the Future Investment Initiative."},
+            {"year": "2021", "event": "The Line and Oxagon unveiled."},
+            {"year": "2022", "event": "Trojena unveiled."},
+            {"year": "2024", "event": "Sindalah island unveiled."}
+        ],
+        "events": [
+            "Future Investment Initiative launch (2017)",
+            "Sindalah island opening (2024)"
+        ]
     },
+
     "red-sea": {
         "name": "The Red Sea",
         "tagline": "Luxury tourism that protects nature.",
-        "about": "A regenerative tourism destination across islands on the west coast."
+        "about": "A regenerative tourism destination on Saudi Arabia's west coast, spread across islands, desert, volcanoes and coral reefs, developed by Red Sea Global.",
+        "images": [
+            "main/images/red-sea/red-sea-1.jpg",
+            "main/images/red-sea/red-sea-2.jpg",
+            "main/images/red-sea/red-sea-3.png",
+            "main/images/red-sea/red-sea-5.png"
+        ],
+        "video": "main/images/red-sea/red-sea-video-4.mp4",
+        "youtube": "",
+        "stats": [
+            {"label": "Area", "value": "28,000 km²"},
+            {"label": "Islands", "value": "90+"},
+            {"label": "Announced", "value": "2017"}
+        ],
+        "attractions": [
+            {"name": "Shura Island", "desc": "The main resort hub shaped like a dolphin.", "image": "main/images/red-sea/red-sea-1.jpg"},
+            {"name": "Coral Reefs", "desc": "One of the world's richest reef systems.", "image": "main/images/red-sea/red-sea-5.png"},
+            {"name": "Ummahat Islands", "desc": "Private island resorts over turquoise lagoons.", "image": "main/images/red-sea/red-sea-2.jpg"},
+            {"name": "Mangroves", "desc": "Coastal forests protected and replanted.", "image": "main/images/red-sea/red-sea-3.png"}
+        ],
+        "timeline": [
+            {"year": "2017", "event": "The Red Sea project announced."},
+            {"year": "2023", "event": "First resorts and Red Sea International Airport opened."}
+        ],
+        "events": [
+            "Opening of the first resorts (2023)"
+        ]
+    },
+
+    "qiddiya": {
+        "name": "Qiddiya",
+        "tagline": "The capital of entertainment, sports and culture.",
+        "about": "Qiddiya is a giga-project near Riyadh dedicated to entertainment, sports and culture, with theme parks, a motorsport track and a major stadium.",
+        "images": [
+            "main/images/qiddiya/qiddiya-1.png",
+            "main/images/qiddiya/qiddiya-2.png",
+            "main/images/qiddiya/qiddiya-3.png",
+            "main/images/qiddiya/qiddiya-4.jpg"
+        ],
+        "video": "",
+        "youtube": "LrdFg64-nx4",
+        "stats": [
+            {"label": "Area", "value": "360 km²"},
+            {"label": "Announced", "value": "2017"},
+            {"label": "Location", "value": "Riyadh"}
+        ],
+        "attractions": [
+            {"name": "Six Flags Qiddiya", "desc": "A theme park with record-breaking rides.", "image": "main/images/qiddiya/qiddiya-2.png"},
+            {"name": "Aquarabia", "desc": "A large water theme park.", "image": "main/images/qiddiya/qiddiya-3.png"},
+            {"name": "Speed Park", "desc": "A motorsport track built into the cliffs.", "image": "main/images/qiddiya/qiddiya-1.png"},
+            {"name": "Gaming & Esports District", "desc": "A hub for gaming and esports.", "image": "main/images/qiddiya/qiddiya-4.jpg"}
+        ],
+        "timeline": [
+            {"year": "2017", "event": "Qiddiya announced."},
+            {"year": "2018", "event": "Groundbreaking ceremony."}
+        ],
+        "events": [
+            "Groundbreaking ceremony (2018)"
+        ]
+    },
+
+    "diriyah": {
+        "name": "Diriyah",
+        "tagline": "Where the Kingdom began.",
+        "about": "Diriyah, on the edge of Riyadh, was the first capital of the Saudi state. Its At-Turaif district is a UNESCO World Heritage Site, and the area is being developed into a cultural and lifestyle destination.",
+        "images": [
+            "main/images/diriyah/diriyah-3.png",
+            "main/images/diriyah/diriyah-4.png",
+            "main/images/diriyah/diriyah-5.png",
+            "main/images/diriyah/diriyah-2.png"
+        ],
+        "video": "main/images/diriyah/diriyah-video-1.mp4",
+        "youtube": "",
+        "stats": [
+            {"label": "First Saudi State", "value": "1727"},
+            {"label": "UNESCO Site", "value": "2010"},
+            {"label": "Location", "value": "Riyadh"}
+        ],
+        "attractions": [
+            {"name": "At-Turaif", "desc": "Historic mud-brick district and UNESCO site.", "image": "main/images/diriyah/diriyah-3.png"},
+            {"name": "Bujairi Terrace", "desc": "Dining destination overlooking At-Turaif.", "image": "main/images/diriyah/diriyah-5.png"},
+            {"name": "Wadi Hanifah", "desc": "A green valley running through Diriyah.", "image": "main/images/diriyah/diriyah-4.png"},
+            {"name": "Saudi Heritage", "desc": "Traditional arts like the Ardah dance.", "image": "main/images/diriyah/diriyah-2.png"}
+        ],
+        "timeline": [
+            {"year": "1727", "event": "Diriyah becomes the capital of the first Saudi state."},
+            {"year": "2010", "event": "At-Turaif listed as a UNESCO World Heritage Site."},
+            {"year": "2017", "event": "Diriyah Gate Development Authority established."},
+            {"year": "2022", "event": "Bujairi Terrace opened."}
+        ],
+        "events": [
+            "Diriyah E-Prix (Formula E)",
+            "Diriyah Season",
+            "Diriyah Contemporary Art Biennale"
+        ]
+    },
+
+    "roshn": {
+        "name": "ROSHN",
+        "tagline": "Communities built for better living.",
+        "about": "ROSHN is a national real estate developer owned by the Public Investment Fund, building integrated residential communities across the Kingdom.",
+        "images": [
+            "main/images/roshn/roshn-2.png",
+            "main/images/roshn/roshn-3.jpg",
+            "main/images/roshn/roshn-4.png",
+            "main/images/roshn/roshn-5.jpg"
+        ],
+        "video": "main/images/roshn/roshn-video-1.mp4",
+        "youtube": "",
+        "stats": [
+            {"label": "Founded", "value": "2020"},
+            {"label": "Owned by", "value": "PIF"}
+        ],
+        "attractions": [
+            {"name": "SEDRA", "desc": "A green community in north Riyadh.", "image": "main/images/roshn/roshn-2.png"},
+            {"name": "WAREFA", "desc": "A residential community in east Riyadh.", "image": "main/images/roshn/roshn-3.jpg"},
+            {"name": "ALAROUS", "desc": "A coastal community in Jeddah.", "image": "main/images/roshn/roshn-4.png"},
+            {"name": "MARAFY", "desc": "A waterfront community in north Jeddah.", "image": "main/images/roshn/roshn-5.jpg"}
+        ],
+        "timeline": [
+            {"year": "2020", "event": "ROSHN launched by the Public Investment Fund."},
+            {"year": "2023", "event": "ROSHN becomes title sponsor of the Saudi Pro League."}
+        ],
+        "events": [
+            "ROSHN Saudi League sponsorship (2023)"
+        ]
+    },
+
+    "alula": {
+        "name": "AlUla",
+        "tagline": "The world's largest living museum.",
+        "about": "AlUla in northwest Saudi Arabia is home to thousands of years of history, from the Nabataean tombs of Hegra to dramatic desert landscapes, now developed as a global cultural destination.",
+        "images": [
+            "main/images/alula/alula-3.png",
+            "main/images/alula/alula-4.png",
+            "main/images/alula/alula-5.png",
+            "main/images/alula/alula-2.png"
+        ],
+        "video": "main/images/alula/alula-video-1.mp4",
+        "youtube": "",
+        "stats": [
+            {"label": "Hegra UNESCO", "value": "2008"},
+            {"label": "RCU Founded", "value": "2017"},
+            {"label": "Region", "value": "Madinah"}
+        ],
+        "attractions": [
+            {"name": "Hegra", "desc": "Nabataean tombs carved into sandstone.", "image": "main/images/alula/alula-3.png"},
+            {"name": "Desert Canyons", "desc": "Dramatic rock formations and valleys.", "image": "main/images/alula/alula-4.png"},
+            {"name": "AlUla Oasis", "desc": "Palm groves along the ancient valley.", "image": "main/images/alula/alula-5.png"},
+            {"name": "Sharaan Nature Reserve", "desc": "Home to the Arabian leopard program.", "image": "main/images/alula/alula-6.png"}
+        ],
+        "timeline": [
+            {"year": "2008", "event": "Hegra becomes Saudi Arabia's first UNESCO site."},
+            {"year": "2017", "event": "Royal Commission for AlUla established."},
+            {"year": "2021", "event": "AlUla hosts the GCC summit."}
+        ],
+        "events": [
+            "Winter at Tantora",
+            "AlUla Moments",
+            "Desert X AlUla"
+        ]
     }
 }
