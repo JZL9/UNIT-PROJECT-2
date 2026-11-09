@@ -46,7 +46,11 @@
     <h2>Video</h2>
     <div class="ratio ratio-16x9 mb-5">
         {% if project.youtube %}
-            <iframe src="https://www.youtube-nocookie.com/embed/{{ project.youtube }}" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/{{ project.youtube }}"
+                    title="{{ project.name }} video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
         {% else %}
             <video controls>
                 <source src="{% static project.video %}" type="video/mp4">
