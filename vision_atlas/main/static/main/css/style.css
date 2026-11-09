@@ -346,9 +346,6 @@ h1, h2, h3, .navbar-brand {
     transition: transform 1.2s ease;
 }
 
-.next-project:hover img {
-    transform: scale(1.06);
-}
 
 .next-overlay {
     position: absolute;
@@ -502,4 +499,26 @@ h1, h2, h3, .navbar-brand {
     box-shadow: 0 0 12px color-mix(in srgb, var(--va-accent) 60%, transparent);
     pointer-events: none;
     z-index: 1040;
+}
+
+/* ===== Ken Burns ===== */
+@keyframes kenburns {
+    from {
+        transform: scale(1) translate(0, 0);
+    }
+    to {
+        transform: scale(1.15) translate(-2%, -2%);
+    }
+}
+
+.next-project img,
+img.hero-media {
+    animation: kenburns 20s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .next-project img,
+    img.hero-media {
+        animation: none;
+    }
 }
