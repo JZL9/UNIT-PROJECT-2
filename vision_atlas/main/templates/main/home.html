@@ -6,6 +6,7 @@
 
 {% block content %}
 
+<!-- HERO -->
 <section class="hero">
     <video class="hero-media" autoplay muted loop playsinline poster="{% static 'main/images/home-1.png' %}">
         <source src="{% static 'main/images/home-video-5.mp4' %}" type="video/mp4">
@@ -30,6 +31,7 @@
     </div>
 </section>
 
+<!-- THE VISION -->
 <section class="section container">
     <div class="row g-5 align-items-center">
         <div class="col-lg-6 reveal">
@@ -46,6 +48,7 @@
     </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="section container" id="projects">
     <p class="section-label">02 — Giga-Projects</p>
     <h2 class="section-title mb-5">Explore the Projects</h2>
@@ -67,6 +70,7 @@
     </div>
 </section>
 
+<!-- PILLARS -->
 <section class="section container">
     <p class="section-label">03 — The Pillars</p>
     <h2 class="section-title mb-5">Three Pillars of the Vision</h2>
@@ -98,5 +102,16 @@
         </div>
     </div>
 </section>
+
+<!-- CLOSING -->
+<a href="{% url 'main:project_detail' 'neom' %}" class="next-project">
+    <img src="{% static 'main/images/neom/the-line-3.jpg' %}" alt="Start with NEOM">
+    <div class="next-overlay"></div>
+    <div class="container next-content">
+        <span class="eyebrow">Start the Journey</span>
+        <h2 class="next-title">NEOM <i class="bi bi-arrow-right"></i></h2>
+        <p>Begin with the land of the future and explore all six giga-projects.</p>
+    </div>
+</a>
 
 {% endblock %}
