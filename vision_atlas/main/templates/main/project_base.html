@@ -145,15 +145,27 @@
 {% endblock %}
 
 {% block next %}
-<a href="{% url 'main:project_detail' next_slug %}" class="next-project">
-    <img src="{% static next_project.images.0 %}" alt="{{ next_project.name }}">
-    <div class="next-overlay"></div>
-    <div class="container next-content">
-        <span class="eyebrow">Next Project</span>
-        <h2 class="next-title">{{ next_project.name }} <i class="bi bi-arrow-right"></i></h2>
-        <p>{{ next_project.tagline }}</p>
-    </div>
-</a>
+{% if next_slug %}
+    <a href="{% url 'main:project_detail' next_slug %}" class="next-project">
+        <img src="{% static next_project.images.0 %}" alt="{{ next_project.name }}">
+        <div class="next-overlay"></div>
+        <div class="container next-content">
+            <span class="eyebrow">Next Project</span>
+            <h2 class="next-title">{{ next_project.name }} <i class="bi bi-arrow-right"></i></h2>
+            <p>{{ next_project.tagline }}</p>
+        </div>
+    </a>
+{% else %}
+    <a href="{% url 'main:home' %}" class="next-project">
+        <img src="{% static 'main/images/home-1.png' %}" alt="Vision Atlas">
+        <div class="next-overlay"></div>
+        <div class="container next-content">
+            <span class="eyebrow">You've explored them all</span>
+            <h2 class="next-title">Back to Home <i class="bi bi-arrow-right"></i></h2>
+            <p>Discover the full journey of Saudi Vision 2030.</p>
+        </div>
+    </a>
+{% endif %}
 {% endblock %}
 
 {% endblock %}

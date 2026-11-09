@@ -25,12 +25,13 @@ def project_detail(request, slug):
         raise Http404("Project not found")
 
     slugs = list(PROJECTS)
-    next_slug = slugs[(slugs.index(slug) + 1) % len(slugs)]
+    index = slugs.index(slug)
+    next_slug = slugs[index + 1] if index + 1 < len(slugs) else None
 
     return render(request, f'main/projects/{slug}.html', {
         'project': project,
         'next_slug': next_slug,
-        'next_project': PROJECTS[next_slug],
+        'next_project': PROJECTS[next_slug] if next_slug else None,
     })
 
 def set_theme(request):

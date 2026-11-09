@@ -1,1 +1,48 @@
 {% extends 'main/project_base.html' %}
+{% load static %}
+
+{% block about %}
+<section class="section container">
+    <p class="section-label">01 — The Story</p>
+    <h2 class="section-title mb-4">About AlUla</h2>
+    <p class="lead-text mb-5">{{ project.about }}</p>
+
+    <div class="scrolly">
+        <div class="scrolly-media">
+            <img class="scrolly-img active" data-step="0" src="{% static 'main/images/alula/alula-2.png' %}" alt="Caravan in AlUla">
+            <img class="scrolly-img" data-step="1" src="{% static 'main/images/alula/alula-3.png' %}" alt="Hegra tomb at night">
+            <img class="scrolly-img" data-step="2" src="{% static 'main/images/alula/alula-4.png' %}" alt="AlUla canyons">
+            <img class="scrolly-img" data-step="3" src="{% static 'main/images/alula/alula-5.png' %}" alt="AlUla oasis">
+            <img class="scrolly-img" data-step="4" src="{% static 'main/images/alula/alula-6.png' %}" alt="Arabian leopard conservation">
+        </div>
+
+        <div class="scrolly-steps">
+            <article class="scrolly-step" data-step="0">
+                <span class="chapter">Chapter 01</span>
+                <h3 class="story-title">A Crossroads of Civilizations</h3>
+                <p class="story-text">For thousands of years, AlUla sat on the ancient Incense Route, where caravans carried frankincense and spices across Arabia. The Dadanite, Lihyanite and Nabataean kingdoms all left their mark here.</p>
+            </article>
+            <article class="scrolly-step" data-step="1">
+                <span class="chapter">Chapter 02</span>
+                <h3 class="story-title">Hegra, Carved in Stone</h3>
+                <p class="story-text">Hegra holds more than a hundred monumental tombs carved into sandstone by the Nabataeans. In 2008 it became Saudi Arabia's first UNESCO World Heritage Site.</p>
+            </article>
+            <article class="scrolly-step" data-step="2">
+                <span class="chapter">Chapter 03</span>
+                <h3 class="story-title">A Desert of Wonders</h3>
+                <p class="story-text">Giant rock formations like Elephant Rock, deep canyons and wide valleys make AlUla feel like an open-air gallery. Even modern buildings like Maraya, the mirrored concert hall, reflect the landscape around them.</p>
+            </article>
+            <article class="scrolly-step" data-step="3">
+                <span class="chapter">Chapter 04</span>
+                <h3 class="story-title">Life in the Oasis</h3>
+                <p class="story-text">A green oasis of palm and citrus trees runs through the valley. Beside it stands AlUla Old Town, a village of mud-brick houses that was home to families for centuries.</p>
+            </article>
+            <article class="scrolly-step" data-step="4">
+                <span class="chapter">Chapter 05</span>
+                <h3 class="story-title">Protecting Nature</h3>
+                <p class="story-text">The Royal Commission for AlUla, founded in 2017, is protecting the region's wildlife through nature reserves like Sharaan, including a program to bring back the endangered Arabian leopard.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
