@@ -1,1 +1,42 @@
 {% extends 'main/project_base.html' %}
+{% load static %}
+
+{% block about %}
+<section class="section container">
+    <p class="section-label">01 — The Story</p>
+    <h2 class="section-title mb-4">About Diriyah</h2>
+    <p class="lead-text mb-5">{{ project.about }}</p>
+
+    <div class="scrolly">
+        <div class="scrolly-media">
+            <img class="scrolly-img active" data-step="0" src="{% static 'main/images/diriyah/diriyah-3.png' %}" alt="Historic Diriyah">
+            <img class="scrolly-img" data-step="1" src="{% static 'main/images/diriyah/diriyah-4.png' %}" alt="At-Turaif district">
+            <img class="scrolly-img" data-step="2" src="{% static 'main/images/diriyah/diriyah-2.png' %}" alt="Ardah performance">
+            <img class="scrolly-img" data-step="3" src="{% static 'main/images/diriyah/diriyah-5.png' %}" alt="Diriyah at night">
+        </div>
+
+        <div class="scrolly-steps">
+            <article class="scrolly-step" data-step="0">
+                <span class="chapter">Chapter 01</span>
+                <h3 class="story-title">Where the Kingdom Began</h3>
+                <p class="story-text">In 1727, Imam Muhammad bin Saud founded the first Saudi state with Diriyah as its capital. This moment is celebrated every year on Founding Day, the 22nd of February, as the beginning of the Saudi story.</p>
+            </article>
+            <article class="scrolly-step" data-step="1">
+                <span class="chapter">Chapter 02</span>
+                <h3 class="story-title">At-Turaif, a World Heritage Site</h3>
+                <p class="story-text">The At-Turaif district, with its mud-brick palaces and narrow lanes, is one of the finest examples of traditional Najdi architecture. It was listed as a UNESCO World Heritage Site in 2010.</p>
+            </article>
+            <article class="scrolly-step" data-step="2">
+                <span class="chapter">Chapter 03</span>
+                <h3 class="story-title">Living Heritage</h3>
+                <p class="story-text">Diriyah is more than old buildings. Traditions like the Ardah, the national sword dance, along with Najdi crafts, poetry and hospitality, keep the spirit of the place alive.</p>
+            </article>
+            <article class="scrolly-step" data-step="3">
+                <span class="chapter">Chapter 04</span>
+                <h3 class="story-title">A New Chapter</h3>
+                <p class="story-text">Since 2017, Diriyah has been developed into a cultural and lifestyle destination. Bujairi Terrace opened in 2022 with restaurants overlooking At-Turaif, and the area now hosts major events such as the Diriyah E-Prix.</p>
+            </article>
+        </div>
+    </div>
+</section>
+{% endblock %}
