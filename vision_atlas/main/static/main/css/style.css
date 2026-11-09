@@ -490,3 +490,16 @@ h1, h2, h3, .navbar-brand {
     }
 }
 
+/* ===== Scroll progress ===== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--va-gold), var(--va-accent));
+    border-radius: 0 3px 3px 0;
+    box-shadow: 0 0 12px color-mix(in srgb, var(--va-accent) 60%, transparent);
+    pointer-events: none;
+    z-index: 1040;
+}

@@ -57,3 +57,15 @@ document.querySelectorAll('.stat-value').forEach((el) => {
 
     requestAnimationFrame(tick);
 });
+
+
+const progressBar = document.querySelector('.scroll-progress');
+
+function updateProgress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = max > 0 ? window.scrollY / max : 0;
+    progressBar.style.width = `${progress * 100}%`;
+}
+
+updateProgress();
+window.addEventListener('scroll', updateProgress);
