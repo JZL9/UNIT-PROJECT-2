@@ -10,6 +10,27 @@
     --va-accent: #3ddc84;
 }
 
+/* ===== Theme colors ===== */
+[data-bs-theme="light"] {
+    --bs-body-bg: #f7f4ee;
+    --bs-body-bg-rgb: 247, 244, 238;
+    --bs-body-color: #1c1b18;
+    --bs-tertiary-bg: #efebe3;
+    --bs-tertiary-bg-rgb: 239, 235, 227;
+    --bs-secondary-color: rgba(28, 27, 24, 0.68);
+    --bs-border-color: #e3ddd1;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #0d1110;
+    --bs-body-bg-rgb: 13, 17, 16;
+    --bs-body-color: #e8e6e1;
+    --bs-tertiary-bg: #151a19;
+    --bs-tertiary-bg-rgb: 21, 26, 25;
+    --bs-secondary-color: rgba(232, 230, 225, 0.65);
+    --bs-border-color: #232a28;
+}
+
 body {
     font-family: 'Inter', system-ui, sans-serif;
 }
