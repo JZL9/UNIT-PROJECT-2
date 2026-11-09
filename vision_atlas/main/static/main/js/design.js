@@ -18,3 +18,20 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+const steps = document.querySelectorAll('.scrolly-step');
+
+if (steps.length) {
+    const images = document.querySelectorAll('.scrolly-img');
+
+    const stepObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const current = entry.target.dataset.step;
+            steps.forEach((s) => s.classList.toggle('active', s === entry.target));
+            images.forEach((img) => img.classList.toggle('active', img.dataset.step === current));
+        });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+
+    steps.forEach((s) => stepObserver.observe(s));
+}

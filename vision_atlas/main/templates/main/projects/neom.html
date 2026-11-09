@@ -7,64 +7,42 @@
     <h2 class="section-title mb-4">About NEOM</h2>
     <p class="lead-text mb-5">{{ project.about }}</p>
 
-    <article class="story reveal">
-        <div class="story-img">
-            <img src="{% static 'main/images/neom/the-line-2.jpg' %}" alt="NEOM vision" loading="lazy">
+    <div class="scrolly">
+        <div class="scrolly-media">
+            <img class="scrolly-img active" data-step="0" src="{% static 'main/images/neom/the-line-2.jpg' %}" alt="NEOM vision">
+            <img class="scrolly-img" data-step="1" src="{% static 'main/images/neom/nature-5.jpg' %}" alt="NEOM coastline">
+            <img class="scrolly-img" data-step="2" src="{% static 'main/images/neom/history-2.jpg' %}" alt="Ancient inscriptions">
+            <img class="scrolly-img" data-step="3" src="{% static 'main/images/neom/nature-3.jpg' %}" alt="NEOM nature reserve">
+            <img class="scrolly-img" data-step="4" src="{% static 'main/images/neom/oxagon-3.jpg' %}" alt="Oxagon port city">
         </div>
-        <div class="row g-4">
-            <div class="col-lg-4"><h3 class="story-title">A Vision Born in 2017</h3></div>
-            <div class="col-lg-8">
-                <p class="story-text">NEOM was announced by Crown Prince Mohammed bin Salman at the Future Investment Initiative in Riyadh in 2017, backed by the Public Investment Fund. The name combines the Greek word "neo", meaning new, with "M" from the Arabic word "Mustaqbal", meaning future. The goal is to build a new model for living, working and doing business, powered by renewable energy.</p>
-            </div>
-        </div>
-    </article>
 
-    <article class="story reveal">
-        <div class="story-img">
-            <img src="{% static 'main/images/neom/nature-5.jpg' %}" alt="NEOM coastline" loading="lazy">
+        <div class="scrolly-steps">
+            <article class="scrolly-step" data-step="0">
+                <span class="chapter">Chapter 01</span>
+                <h3 class="story-title">A Vision Born in 2017</h3>
+                <p class="story-text">NEOM was announced by Crown Prince Mohammed bin Salman at the Future Investment Initiative in Riyadh in 2017, backed by the Public Investment Fund. The name combines the Greek word "neo", meaning new, with "M" from the Arabic word "Mustaqbal", meaning future.</p>
+            </article>
+            <article class="scrolly-step" data-step="1">
+                <span class="chapter">Chapter 02</span>
+                <h3 class="story-title">Where Sea, Mountains and Desert Meet</h3>
+                <p class="story-text">NEOM sits in the far northwest of the Kingdom, where the Red Sea meets the Gulf of Aqaba. Within one region you find coral coastlines, golden deserts and mountain peaks that see snow in winter.</p>
+            </article>
+            <article class="scrolly-step" data-step="2">
+                <span class="chapter">Chapter 03</span>
+                <h3 class="story-title">Thousands of Years of History</h3>
+                <p class="story-text">Long before NEOM, this land was a crossroads for ancient trade routes linking Arabia with the Levant and Egypt. Thousands of rock inscriptions have been found across the area.</p>
+            </article>
+            <article class="scrolly-step" data-step="3">
+                <span class="chapter">Chapter 04</span>
+                <h3 class="story-title">Designed Around Nature</h3>
+                <p class="story-text">NEOM plans to keep the vast majority of its land as protected nature, bringing back wildlife, replanting native vegetation and protecting the coral reefs along its coast.</p>
+            </article>
+            <article class="scrolly-step" data-step="4">
+                <span class="chapter">Chapter 05</span>
+                <h3 class="story-title">A New Economy</h3>
+                <p class="story-text">Beyond tourism, NEOM is built for new industries: renewable energy, green hydrogen, water, advanced manufacturing and technology. Oxagon, its port city, is planned as a hub for clean industry and global trade.</p>
+            </article>
         </div>
-        <div class="row g-4">
-            <div class="col-lg-4"><h3 class="story-title">Where Sea, Mountains and Desert Meet</h3></div>
-            <div class="col-lg-8">
-                <p class="story-text">NEOM sits in the far northwest of the Kingdom, where the Red Sea meets the Gulf of Aqaba. Within one region you find coral coastlines, golden deserts and mountain peaks that see snow in winter. This mix of landscapes gives NEOM a milder climate than much of the region and makes it a destination for year-round tourism.</p>
-            </div>
-        </div>
-    </article>
-
-    <article class="story reveal">
-        <div class="story-img">
-            <img src="{% static 'main/images/neom/history-2.jpg' %}" alt="Ancient inscriptions in NEOM" loading="lazy">
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4"><h3 class="story-title">Thousands of Years of History</h3></div>
-            <div class="col-lg-8">
-                <p class="story-text">Long before NEOM, this land was a crossroads for ancient trade routes linking Arabia with the Levant and Egypt. Thousands of rock inscriptions and carvings have been found across the area, giving a rare window into the languages and daily life of early Arabian civilizations.</p>
-            </div>
-        </div>
-    </article>
-
-    <article class="story reveal">
-        <div class="story-img">
-            <img src="{% static 'main/images/neom/nature-3.jpg' %}" alt="NEOM nature reserve" loading="lazy">
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4"><h3 class="story-title">Designed Around Nature</h3></div>
-            <div class="col-lg-8">
-                <p class="story-text">NEOM plans to keep the vast majority of its land as protected nature. The NEOM Nature Reserve focuses on bringing back wildlife, replanting native vegetation and protecting the coral reefs along its coast, so that development and nature can grow side by side.</p>
-            </div>
-        </div>
-    </article>
-
-    <article class="story reveal">
-        <div class="story-img">
-            <img src="{% static 'main/images/neom/oxagon-3.jpg' %}" alt="Oxagon port city" loading="lazy">
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4"><h3 class="story-title">A New Economy</h3></div>
-            <div class="col-lg-8">
-                <p class="story-text">Beyond tourism, NEOM is built to attract new industries: renewable energy, green hydrogen, water, advanced manufacturing, mobility and technology. Oxagon, its port city, is planned as a hub for clean industry and global trade on one of the world's busiest shipping routes.</p>
-            </div>
-        </div>
-    </article>
+    </div>
 </section>
 {% endblock %}
