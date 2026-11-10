@@ -49,3 +49,16 @@ def set_theme(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+def set_language(request):
+    lang = request.GET.get('lang', 'en')
+    if lang not in ('en', 'ar'):
+        lang = 'en'
+
+    next_url = request.GET.get('next', '/')
+    if not url_has_allowed_host_and_scheme(next_url, allowed_hosts={request.get_host()}):
+        next_url = '/'
+
+    response = redirect(next_url)
+    response.set_cookie('lang', lang, max_age=60 * 60 * 24 * 365)
+    return response

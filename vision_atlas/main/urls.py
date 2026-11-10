@@ -8,4 +8,5 @@ urlpatterns = [
     path('project/<slug:slug>/',views.project_detail, name='project_detail'),
     path('theme/', views.set_theme, name='set_theme'),
     path('about/', views.about, name='about'),
+    path('language/', views.set_language, name='set_language'),
 ]

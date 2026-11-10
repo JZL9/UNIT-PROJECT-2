@@ -900,3 +900,36 @@ html {
     font-size: 0.85rem;
     color: var(--bs-secondary-color);
 }
+
+/* ===== Arabic / RTL ===== */
+[dir="rtl"] body,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .stat-value,
+[dir="rtl"] .feature-num,
+[dir="rtl"] .timeline-year {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .section-label,
+[dir="rtl"] .stat-label,
+[dir="rtl"] .chapter,
+[dir="rtl"] .slide-num,
+[dir="rtl"] .footer-title,
+[dir="rtl"] .project-card-link,
+[dir="rtl"] .hero-title,
+[dir="rtl"] .section-title,
+[dir="rtl"] .next-title {
+    letter-spacing: 0;
+}
+
+[dir="rtl"] .next-title i,
+[dir="rtl"] .project-card-link i {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .next-overlay {
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+}

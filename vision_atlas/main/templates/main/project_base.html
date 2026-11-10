@@ -5,7 +5,7 @@
 {% block body_class %}has-hero{% endblock %}
 
 {% block footer_social %}
-<h4 class="footer-title">Follow {{ project.name }}</h4>
+<h4 class="footer-title">{% if request.COOKIES.lang == 'ar' %}تابع{% else %}Follow{% endif %} {{ project.name }}</h4>
 <div class="footer-social">
     {% for social in project.socials %}
         {% if social.url %}
