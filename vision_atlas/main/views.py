@@ -46,3 +46,6 @@ def set_theme(request):
     response = redirect(next_url)
     response.set_cookie('theme', theme, max_age=60 * 60 * 24 * 365)
     return response
+
+def about(request):
+    return render(request, 'main/about.html')
