@@ -14,9 +14,23 @@ DATA_FILE = Path(__file__).resolve().parent / 'data' / 'projects.json'
 with open(DATA_FILE, encoding='utf-8') as f:
     PROJECTS = json.load(f)
 
+def localize(project, lang):
+    if lang != 'ar' or 'ar' not in project:
+        return project
+
+    result = dict(project)
+    for key, value in project['ar'].items():
+        original = project.get(key)
+        if isinstance(value, list) and isinstance(original, list) and value and isinstance(value[0], dict):
+            result[key] = [{**orig, **tr} for orig, tr in zip(original, value)]
+        else:
+            result[key] = value
+    return result
 
 def home(request):
-    return render(request, 'main/home.html', {'projects': PROJECTS})
+    lang = request.COOKIES.get('lang', 'en')
+    projects = {slug: localize(p, lang) for slug, p in PROJECTS.items()}
+    return render(request, 'main/home.html', {'projects': projects})
 
 
 def project_detail(request, slug):
@@ -28,10 +42,12 @@ def project_detail(request, slug):
     index = slugs.index(slug)
     next_slug = slugs[index + 1] if index + 1 < len(slugs) else None
 
+    lang = request.COOKIES.get('lang', 'en')
+
     return render(request, f'main/projects/{slug}.html', {
-        'project': project,
+        'project': localize(project, lang),
         'next_slug': next_slug,
-        'next_project': PROJECTS[next_slug] if next_slug else None,
+        'next_project': localize(PROJECTS[next_slug], lang) if next_slug else None,
     })
 
 def set_theme(request):

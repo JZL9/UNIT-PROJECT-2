@@ -12,13 +12,6 @@
             "main/images/neom/history-1.jpg"
         ],
         "video": "main/images/neom/neom-video-2.mp4",
-        "youtube": "",
-        "socials": [
-            {"name": "Website", "icon": "globe2", "url": "https://www.neom.com"},
-            {"name": "X", "icon": "twitter-x", "url": "https://x.com/NEOM"},
-            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/neom"},
-            {"name": "YouTube", "icon": "youtube", "url": "https://www.youtube.com/@NEOM"}
-        ],
         "stats": [
             {"label": "Area", "value": "26,500 km²"},
             {"label": "Announced", "value": "2017"},
@@ -41,7 +34,41 @@
         "events": [
             "Future Investment Initiative launch (2017)",
             "Sindalah island opening (2024)"
-        ]
+        ],
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.neom.com"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/NEOM"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/neom"},
+            {"name": "YouTube", "icon": "youtube", "url": "https://www.youtube.com/@NEOM"}
+        ],
+        "ar": {
+            "name": "نيوم",
+            "tagline": "أرض المستقبل، تُبنى من الصفر.",
+            "about": "نيوم مشروع عملاق في منطقة تبوك شمال غرب المملكة، على ساحل البحر الأحمر وخليج العقبة. يجمع مدناً جديدة وموانئ ووجهات سياحية ومحميات طبيعية تحت رؤية واحدة.",
+            "stats": [
+                {"label": "المساحة", "value": "26,500 كم²"},
+                {"label": "الإعلان", "value": "2017"},
+                {"label": "المنطقة", "value": "تبوك"}
+            ],
+            "attractions": [
+                {"name": "ذا لاين", "desc": "مدينة خطية بلا سيارات ولا شوارع."},
+                {"name": "أوكساجون", "desc": "مدينة صناعية وميناء عائم."},
+                {"name": "تروجينا", "desc": "وجهة جبلية للتزلج في الهواء الطلق."},
+                {"name": "مقنا", "desc": "منطقة ساحلية على خليج العقبة."},
+                {"name": "جزر نيوم", "desc": "جزر فاخرة في البحر الأحمر، أولها سندالة."},
+                {"name": "الطبيعة في نيوم", "desc": "محميات وصحارٍ وشعاب مرجانية."}
+            ],
+            "timeline": [
+                {"event": "الإعلان عن نيوم في مبادرة مستقبل الاستثمار."},
+                {"event": "الكشف عن ذا لاين وأوكساجون."},
+                {"event": "الكشف عن تروجينا."},
+                {"event": "الكشف عن جزيرة سندالة."}
+            ],
+            "events": [
+                "إطلاق نيوم في مبادرة مستقبل الاستثمار (2017)",
+                "افتتاح جزيرة سندالة (2024)"
+            ]
+        }
     },
 
     "red-sea": {
@@ -55,12 +82,6 @@
             "main/images/red-sea/red-sea-5.png"
         ],
         "video": "main/images/red-sea/red-sea-video-4.mp4",
-        "youtube": "",
-        "socials": [
-            {"name": "Website", "icon": "globe2", "url": "https://www.redseaglobal.com"},
-            {"name": "X", "icon": "twitter-x", "url": "https://x.com/RedSeaGlobal"},
-            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/redseaglobal"}
-        ],
         "stats": [
             {"label": "Area", "value": "28,000 km²"},
             {"label": "Islands", "value": "90+"},
@@ -78,7 +99,35 @@
         ],
         "events": [
             "Opening of the first resorts (2023)"
-        ]
+        ],
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.redseaglobal.com"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/RedSeaGlobal"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/redseaglobal"}
+        ],
+        "ar": {
+            "name": "البحر الأحمر",
+            "tagline": "سياحة فاخرة تحمي الطبيعة.",
+            "about": "وجهة سياحية متجددة على الساحل الغربي للمملكة، تمتد بين الجزر والصحراء والبراكين والشعاب المرجانية، وتطورها شركة البحر الأحمر الدولية.",
+            "stats": [
+                {"label": "المساحة", "value": "28,000 كم²"},
+                {"label": "الجزر", "value": "90+"},
+                {"label": "الإعلان", "value": "2017"}
+            ],
+            "attractions": [
+                {"name": "جزيرة شُورى", "desc": "مركز المنتجعات الرئيسي على شكل دلفين."},
+                {"name": "الشعاب المرجانية", "desc": "من أغنى أنظمة الشعاب في العالم."},
+                {"name": "جزر أمهات", "desc": "منتجعات خاصة فوق بحيرات فيروزية."},
+                {"name": "أشجار المانجروف", "desc": "غابات ساحلية محمية ويُعاد زراعتها."}
+            ],
+            "timeline": [
+                {"event": "الإعلان عن مشروع البحر الأحمر."},
+                {"event": "افتتاح أول المنتجعات ومطار البحر الأحمر الدولي."}
+            ],
+            "events": [
+                "افتتاح أول المنتجعات (2023)"
+            ]
+        }
     },
 
     "qiddiya": {
@@ -92,10 +141,6 @@
             "main/images/qiddiya/qiddiya-4.jpg"
         ],
         "video": "main/images/qiddiya/qiddiya-video-5.mp4",
-        "youtube": "",
-        "socials": [
-            {"name": "Website", "icon": "globe2", "url": "https://qiddiya.com"}
-        ],
         "stats": [
             {"label": "Area", "value": "360 km²"},
             {"label": "Announced", "value": "2017"},
@@ -113,7 +158,33 @@
         ],
         "events": [
             "Groundbreaking ceremony (2018)"
-        ]
+        ],
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://qiddiya.com"}
+        ],
+        "ar": {
+            "name": "القدية",
+            "tagline": "عاصمة الترفيه والرياضة والثقافة.",
+            "about": "القدية مشروع عملاق قرب الرياض مخصص للترفيه والرياضة والثقافة، يضم مدن ألعاب وحلبة لرياضة المحركات واستاداً رئيسياً.",
+            "stats": [
+                {"label": "المساحة", "value": "360 كم²"},
+                {"label": "الإعلان", "value": "2017"},
+                {"label": "الموقع", "value": "الرياض"}
+            ],
+            "attractions": [
+                {"name": "سكس فلاقز القدية", "desc": "مدينة ألعاب بأرقام قياسية."},
+                {"name": "أكواريبيا", "desc": "حديقة ألعاب مائية ضخمة."},
+                {"name": "حلبة السرعة", "desc": "حلبة لرياضة المحركات بين المنحدرات."},
+                {"name": "حي الألعاب والرياضات الإلكترونية", "desc": "مركز للألعاب والرياضات الإلكترونية."}
+            ],
+            "timeline": [
+                {"event": "الإعلان عن القدية."},
+                {"event": "حفل وضع حجر الأساس."}
+            ],
+            "events": [
+                "حفل وضع حجر الأساس (2018)"
+            ]
+        }
     },
 
     "diriyah": {
@@ -127,12 +198,6 @@
             "main/images/diriyah/diriyah-2.png"
         ],
         "video": "main/images/diriyah/diriyah-video-1.mp4",
-        "youtube": "",
-        "socials": [
-            {"name": "Website", "icon": "globe2", "url": "https://www.diriyah.sa"},
-            {"name": "X", "icon": "twitter-x", "url": "https://x.com/DiriyahCo"},
-            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/diriyahco"}
-        ],
         "stats": [
             {"label": "First Saudi State", "value": "1727"},
             {"label": "UNESCO Site", "value": "2010"},
@@ -154,7 +219,39 @@
             "Diriyah E-Prix (Formula E)",
             "Diriyah Season",
             "Diriyah Contemporary Art Biennale"
-        ]
+        ],
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.diriyah.sa"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/DiriyahCo"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/diriyahco"}
+        ],
+        "ar": {
+            "name": "الدرعية",
+            "tagline": "حيث بدأت المملكة.",
+            "about": "الدرعية على أطراف الرياض كانت أول عاصمة للدولة السعودية. حي الطريف فيها مسجل في قائمة التراث العالمي لليونسكو، وتُطوَّر المنطقة اليوم كوجهة ثقافية وسياحية.",
+            "stats": [
+                {"label": "الدولة السعودية الأولى", "value": "1727"},
+                {"label": "تراث اليونسكو", "value": "2010"},
+                {"label": "الموقع", "value": "الرياض"}
+            ],
+            "attractions": [
+                {"name": "حي الطريف", "desc": "حي طيني تاريخي وموقع تراث عالمي."},
+                {"name": "مطل البجيري", "desc": "وجهة مطاعم تطل على الطريف."},
+                {"name": "وادي حنيفة", "desc": "وادٍ أخضر يمر عبر الدرعية."},
+                {"name": "التراث السعودي", "desc": "فنون تقليدية مثل العرضة السعودية."}
+            ],
+            "timeline": [
+                {"event": "الدرعية عاصمة للدولة السعودية الأولى."},
+                {"event": "تسجيل حي الطريف في قائمة التراث العالمي لليونسكو."},
+                {"event": "تأسيس هيئة تطوير بوابة الدرعية."},
+                {"event": "افتتاح مطل البجيري."}
+            ],
+            "events": [
+                "سباق الدرعية للفورمولا إي",
+                "موسم الدرعية",
+                "بينالي الدرعية للفن المعاصر"
+            ]
+        }
     },
 
     "roshn": {
@@ -168,12 +265,6 @@
             "main/images/roshn/roshn-5.jpg"
         ],
         "video": "main/images/roshn/roshn-video-1.mp4",
-        "youtube": "",
-        "socials": [
-            {"name": "Website", "icon": "globe2", "url": "https://www.roshn.sa"},
-            {"name": "X", "icon": "twitter-x", "url": "https://x.com/ROSHNksa"},
-            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/roshnksa"}
-        ],
         "stats": [
             {"label": "Founded", "value": "2020"},
             {"label": "Owned by", "value": "PIF"}
@@ -190,7 +281,34 @@
         ],
         "events": [
             "ROSHN Saudi League sponsorship (2023)"
-        ]
+        ],
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.roshn.sa"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/ROSHNksa"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/roshnksa"}
+        ],
+        "ar": {
+            "name": "روشن",
+            "tagline": "مجتمعات تُبنى لحياة أفضل.",
+            "about": "روشن مطوّر عقاري وطني مملوك لصندوق الاستثمارات العامة، يبني مجتمعات سكنية متكاملة في مختلف مناطق المملكة.",
+            "stats": [
+                {"label": "التأسيس", "value": "2020"},
+                {"label": "المالك", "value": "صندوق الاستثمارات"}
+            ],
+            "attractions": [
+                {"name": "سدرة", "desc": "مجتمع أخضر شمال الرياض."},
+                {"name": "وريفة", "desc": "مجتمع سكني شرق الرياض."},
+                {"name": "العروس", "desc": "مجتمع ساحلي في جدة."},
+                {"name": "مرافي", "desc": "مجتمع على الواجهة البحرية شمال جدة."}
+            ],
+            "timeline": [
+                {"event": "إطلاق روشن من صندوق الاستثمارات العامة."},
+                {"event": "روشن الراعي الرسمي لدوري المحترفين السعودي."}
+            ],
+            "events": [
+                "رعاية دوري روشن السعودي (2023)"
+            ]
+        }
     },
 
     "alula": {
@@ -204,11 +322,6 @@
             "main/images/alula/alula-2.png"
         ],
         "video": "main/images/alula/alula-video-1.mp4",
-        "youtube": "",
-        "socials": [
-            {"name": "Website", "icon": "globe2", "url": "https://www.experiencealula.com"},
-            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/alulatourism"}
-        ],
         "stats": [
             {"label": "Hegra UNESCO", "value": "2008"},
             {"label": "RCU Founded", "value": "2017"},
@@ -229,6 +342,36 @@
             "Winter at Tantora",
             "AlUla Moments",
             "Desert X AlUla"
-        ]
+        ],
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.experiencealula.com"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/alulatourism"}
+        ],
+        "ar": {
+            "name": "العُلا",
+            "tagline": "أكبر متحف حي في العالم.",
+            "about": "تضم العُلا في شمال غرب المملكة آلاف السنين من التاريخ، من مقابر الأنباط في الحِجر إلى المناظر الصحراوية المذهلة، وتُطوَّر اليوم كوجهة ثقافية عالمية.",
+            "stats": [
+                {"label": "الحِجر في اليونسكو", "value": "2008"},
+                {"label": "تأسيس الهيئة الملكية", "value": "2017"},
+                {"label": "المنطقة", "value": "المدينة المنورة"}
+            ],
+            "attractions": [
+                {"name": "الحِجر", "desc": "مقابر نبطية منحوتة في الصخر."},
+                {"name": "الأودية الصحراوية", "desc": "تكوينات صخرية وأودية مذهلة."},
+                {"name": "واحة العُلا", "desc": "بساتين نخيل على طول الوادي القديم."},
+                {"name": "محمية شرعان", "desc": "موطن برنامج إعادة النمر العربي."}
+            ],
+            "timeline": [
+                {"event": "الحِجر أول موقع سعودي في قائمة اليونسكو."},
+                {"event": "تأسيس الهيئة الملكية لمحافظة العُلا."},
+                {"event": "العُلا تستضيف القمة الخليجية."}
+            ],
+            "events": [
+                "شتاء طنطورة",
+                "لحظات العُلا",
+                "ديزرت إكس العُلا"
+            ]
+        }
     }
 }
