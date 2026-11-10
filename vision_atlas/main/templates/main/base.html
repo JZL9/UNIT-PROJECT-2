@@ -79,8 +79,55 @@
         {% endblock %}
     </main>
 
-    <footer class="text-center py-4 bg-body-tertiary">
-        <p class="mb-0">Vision Atlas &copy; 2026</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand fw-bold fs-3" href="{% url 'main:home' %}">Vision Atlas</a>
+                    <p class="footer-text mt-3">A visual journey through the giga-projects of Saudi Vision 2030.</p>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'main:home' %}">Home</a></li>
+                        <li><a href="{% url 'main:about' %}">About</a></li>
+                        <li><a href="{% url 'main:home' %}#projects">All Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h4 class="footer-title">Projects</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'main:project_detail' 'neom' %}">NEOM</a></li>
+                        <li><a href="{% url 'main:project_detail' 'red-sea' %}">The Red Sea</a></li>
+                        <li><a href="{% url 'main:project_detail' 'qiddiya' %}">Qiddiya</a></li>
+                        <li><a href="{% url 'main:project_detail' 'diriyah' %}">Diriyah</a></li>
+                        <li><a href="{% url 'main:project_detail' 'roshn' %}">ROSHN</a></li>
+                        <li><a href="{% url 'main:project_detail' 'alula' %}">AlUla</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    {% block footer_social %}
+                    <h4 class="footer-title">Follow Vision 2030</h4>
+                    <div class="footer-social">
+                        <a href="https://www.vision2030.gov.sa" target="_blank" rel="noopener" aria-label="Website"><i
+                                class="bi bi-globe2"></i></a>
+                        <a href="https://x.com/SaudiVision2030" target="_blank" rel="noopener" aria-label="X"><i
+                                class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/saudivision2030" target="_blank" rel="noopener"
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                    {% endblock %}
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Vision Atlas · Built by Fahad Al-Otaibi</span>
+                <span>Images &copy; their official owners</span>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
