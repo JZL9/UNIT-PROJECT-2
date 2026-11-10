@@ -4,6 +4,17 @@
 {% block title %}{{ project.name }} | Vision Atlas{% endblock %}
 {% block body_class %}has-hero{% endblock %}
 
+{% block footer_social %}
+<h4 class="footer-title">Follow {{ project.name }}</h4>
+<div class="footer-social">
+    {% for social in project.socials %}
+        {% if social.url %}
+            <a href="{{ social.url }}" target="_blank" rel="noopener" aria-label="{{ social.name }}"><i class="bi bi-{{ social.icon }}"></i></a>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
+
 {% block content %}
 
 {% block hero %}

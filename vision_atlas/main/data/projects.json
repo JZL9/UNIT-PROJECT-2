@@ -13,6 +13,12 @@
         ],
         "video": "main/images/neom/neom-video-2.mp4",
         "youtube": "",
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.neom.com"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/NEOM"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/neom"},
+            {"name": "YouTube", "icon": "youtube", "url": "https://www.youtube.com/@NEOM"}
+        ],
         "stats": [
             {"label": "Area", "value": "26,500 km²"},
             {"label": "Announced", "value": "2017"},
@@ -50,6 +56,11 @@
         ],
         "video": "main/images/red-sea/red-sea-video-4.mp4",
         "youtube": "",
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.redseaglobal.com"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/RedSeaGlobal"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/redseaglobal"}
+        ],
         "stats": [
             {"label": "Area", "value": "28,000 km²"},
             {"label": "Islands", "value": "90+"},
@@ -82,6 +93,9 @@
         ],
         "video": "main/images/qiddiya/qiddiya-video-5.mp4",
         "youtube": "",
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://qiddiya.com"}
+        ],
         "stats": [
             {"label": "Area", "value": "360 km²"},
             {"label": "Announced", "value": "2017"},
@@ -114,6 +128,11 @@
         ],
         "video": "main/images/diriyah/diriyah-video-1.mp4",
         "youtube": "",
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.diriyah.sa"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/DiriyahCo"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/diriyahco"}
+        ],
         "stats": [
             {"label": "First Saudi State", "value": "1727"},
             {"label": "UNESCO Site", "value": "2010"},
@@ -150,6 +169,11 @@
         ],
         "video": "main/images/roshn/roshn-video-1.mp4",
         "youtube": "",
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.roshn.sa"},
+            {"name": "X", "icon": "twitter-x", "url": "https://x.com/ROSHNksa"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/roshnksa"}
+        ],
         "stats": [
             {"label": "Founded", "value": "2020"},
             {"label": "Owned by", "value": "PIF"}
@@ -181,6 +205,10 @@
         ],
         "video": "main/images/alula/alula-video-1.mp4",
         "youtube": "",
+        "socials": [
+            {"name": "Website", "icon": "globe2", "url": "https://www.experiencealula.com"},
+            {"name": "Instagram", "icon": "instagram", "url": "https://www.instagram.com/alulatourism"}
+        ],
         "stats": [
             {"label": "Hegra UNESCO", "value": "2008"},
             {"label": "RCU Founded", "value": "2017"},
