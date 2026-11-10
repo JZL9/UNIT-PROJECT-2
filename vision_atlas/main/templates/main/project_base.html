@@ -29,7 +29,7 @@
     <div class="hero-overlay"></div>
 
     <div class="container hero-content">
-        <p class="eyebrow">Vision 2030 · Giga-Project</p>
+        <p class="eyebrow">{% if request.COOKIES.lang == 'ar' %}رؤية 2030 · مشروع عملاق{% else %}Vision 2030 · Giga-Project{% endif %}</p>
         <h1 class="hero-title">{{ project.name }}</h1>
         <p class="hero-tagline">{{ project.tagline }}</p>
     </div>
@@ -51,8 +51,8 @@
 <section class="section container">
     <div class="row g-4 g-lg-5 align-items-center reveal">
         <div class="col-lg-5">
-            <p class="section-label">01 — About</p>
-            <h2 class="section-title">Overview</h2>
+            <p class="section-label">{% if request.COOKIES.lang == 'ar' %}01 — نبذة{% else %}01 — About{% endif %}</p>
+            <h2 class="section-title">{% if request.COOKIES.lang == 'ar' %}نظرة عامة{% else %}Overview{% endif %}</h2>
         </div>
         <div class="col-lg-7">
             <p class="lead-text">{{ project.about }}</p>
@@ -65,8 +65,8 @@
 <section class="section">
     <div class="container d-flex justify-content-between align-items-end mb-5">
         <div>
-            <p class="section-label">02 — Highlights</p>
-            <h2 class="section-title mb-0">Top Attractions</h2>
+            <p class="section-label">{% if request.COOKIES.lang == 'ar' %}02 — أبرز المعالم{% else %}02 — Highlights{% endif %}</p>
+            <h2 class="section-title mb-0">{% if request.COOKIES.lang == 'ar' %}أبرز الوجهات{% else %}Top Attractions{% endif %}</h2>
         </div>
         <div class="d-none d-md-flex d-lg-none gap-2">
             <button class="slider-btn" type="button" data-dir="-1" aria-label="Previous"><i class="bi bi-arrow-left"></i></button>
@@ -74,7 +74,6 @@
         </div>
     </div>
 
-    <!-- Desktop: zigzag -->
     <div class="container d-none d-lg-block">
         {% for place in project.attractions %}
             <div class="row align-items-center g-5 feature reveal {% if forloop.counter|divisibleby:2 %}flex-row-reverse{% endif %}">
@@ -92,7 +91,6 @@
         {% endfor %}
     </div>
 
-    <!-- Mobile and tablet: slider -->
     <div class="slider d-lg-none">
         {% for place in project.attractions %}
             <article class="slide">
@@ -112,8 +110,8 @@
 
 {% block gallery %}
 <section class="section container">
-    <p class="section-label">03 — Gallery</p>
-    <h2 class="section-title mb-4">Gallery</h2>
+    <p class="section-label">{% if request.COOKIES.lang == 'ar' %}03 — معرض الصور{% else %}03 — Gallery{% endif %}</p>
+    <h2 class="section-title mb-4">{% if request.COOKIES.lang == 'ar' %}معرض الصور{% else %}Gallery{% endif %}</h2>
     <div class="gallery-grid">
         {% for img in project.images %}
             <figure class="gallery-item reveal">
@@ -128,8 +126,8 @@
 <section class="section container">
     <div class="row g-5">
         <div class="col-lg-7">
-            <p class="section-label">04 — Timeline</p>
-            <h2 class="section-title mb-4">Milestones</h2>
+            <p class="section-label">{% if request.COOKIES.lang == 'ar' %}04 — المسيرة{% else %}04 — Timeline{% endif %}</p>
+            <h2 class="section-title mb-4">{% if request.COOKIES.lang == 'ar' %}محطات بارزة{% else %}Milestones{% endif %}</h2>
             <ol class="timeline">
                 {% for item in project.timeline %}
                     <li class="timeline-item reveal">
@@ -140,8 +138,8 @@
             </ol>
         </div>
         <div class="col-lg-5">
-            <p class="section-label">05 — Events</p>
-            <h2 class="section-title mb-4">Major Events</h2>
+            <p class="section-label">{% if request.COOKIES.lang == 'ar' %}05 — الفعاليات{% else %}05 — Events{% endif %}</p>
+            <h2 class="section-title mb-4">{% if request.COOKIES.lang == 'ar' %}أبرز الفعاليات{% else %}Major Events{% endif %}</h2>
             <ul class="event-list">
                 {% for event in project.events %}
                     <li class="reveal">
@@ -161,7 +159,7 @@
         <img src="{% static next_project.images.0 %}" alt="{{ next_project.name }}">
         <div class="next-overlay"></div>
         <div class="container next-content">
-            <span class="eyebrow">Next Project</span>
+            <span class="eyebrow">{% if request.COOKIES.lang == 'ar' %}المشروع التالي{% else %}Next Project{% endif %}</span>
             <h2 class="next-title">{{ next_project.name }} <i class="bi bi-arrow-right"></i></h2>
             <p>{{ next_project.tagline }}</p>
         </div>
@@ -171,9 +169,15 @@
         <img src="{% static 'main/images/home-1.png' %}" alt="Vision Atlas">
         <div class="next-overlay"></div>
         <div class="container next-content">
-            <span class="eyebrow">You've explored them all</span>
-            <h2 class="next-title">Back to Home <i class="bi bi-arrow-right"></i></h2>
-            <p>Discover the full journey of Saudi Vision 2030.</p>
+            {% if request.COOKIES.lang == 'ar' %}
+                <span class="eyebrow">استكشفت كل المشاريع</span>
+                <h2 class="next-title">العودة للرئيسية <i class="bi bi-arrow-right"></i></h2>
+                <p>اكتشف الرحلة كاملة لرؤية السعودية 2030.</p>
+            {% else %}
+                <span class="eyebrow">You've explored them all</span>
+                <h2 class="next-title">Back to Home <i class="bi bi-arrow-right"></i></h2>
+                <p>Discover the full journey of Saudi Vision 2030.</p>
+            {% endif %}
         </div>
     </a>
 {% endif %}
