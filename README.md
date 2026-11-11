@@ -25,6 +25,7 @@ Built as **UNIT-PROJECT-2** for the Tuwaiq Academy bootcamp.
 - Navbar with a **projects dropdown** and a footer with each project's **official accounts**
 - Project content stored in a **JSON** file with English and Arabic versions
 - **Deployed on Render** with Gunicorn and WhiteNoise, auto-deploys on every push
+- Hero videos hosted on **Cloudinary CDN** with automatic compression
 
 ## 📄 Pages
 
