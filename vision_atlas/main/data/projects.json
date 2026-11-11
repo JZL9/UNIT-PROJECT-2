@@ -11,7 +11,7 @@
             "main/images/neom/nature-4.jpg",
             "main/images/neom/history-1.jpg"
         ],
-        "video": "main/images/neom/neom-video-2.mp4",
+        "video": "https://res.cloudinary.com/jpva3wbq/video/upload/q_auto,w_1280,ac_none,du_30/v1794406101/neom-video-2.mp4",
         "stats": [
             {"label": "Area", "value": "26,500 km²"},
             {"label": "Announced", "value": "2017"},
@@ -81,7 +81,7 @@
             "main/images/red-sea/red-sea-3.png",
             "main/images/red-sea/red-sea-5.png"
         ],
-        "video": "main/images/red-sea/red-sea-video-4.mp4",
+        "video": "https://res.cloudinary.com/jpva3wbq/video/upload/q_auto,w_1280,ac_none,du_30/v1794406131/red-sea-video-4.mp4",
         "stats": [
             {"label": "Area", "value": "28,000 km²"},
             {"label": "Islands", "value": "90+"},
@@ -140,7 +140,7 @@
             "main/images/qiddiya/qiddiya-3.png",
             "main/images/qiddiya/qiddiya-4.jpg"
         ],
-        "video": "main/images/qiddiya/qiddiya-video-5.mp4",
+        "video": "https://res.cloudinary.com/jpva3wbq/video/upload/q_auto,w_1280,ac_none,du_30/v1794406115/qiddiya-video-5.mp4",
         "stats": [
             {"label": "Area", "value": "360 km²"},
             {"label": "Announced", "value": "2017"},
@@ -197,7 +197,7 @@
             "main/images/diriyah/diriyah-5.png",
             "main/images/diriyah/diriyah-2.png"
         ],
-        "video": "main/images/diriyah/diriyah-video-1.mp4",
+        "video": "https://res.cloudinary.com/jpva3wbq/video/upload/q_auto,w_1280,ac_none,du_30/v1794406084/diriyah-video-1.mp4",
         "stats": [
             {"label": "First Saudi State", "value": "1727"},
             {"label": "UNESCO Site", "value": "2010"},
@@ -264,7 +264,7 @@
             "main/images/roshn/roshn-4.png",
             "main/images/roshn/roshn-5.jpg"
         ],
-        "video": "main/images/roshn/roshn-video-1.mp4",
+        "video": "https://res.cloudinary.com/jpva3wbq/video/upload/q_auto,w_1280,ac_none,du_30/v1794406143/roshn-video-1.mp4",
         "stats": [
             {"label": "Founded", "value": "2020"},
             {"label": "Owned by", "value": "PIF"}
@@ -321,7 +321,7 @@
             "main/images/alula/alula-5.png",
             "main/images/alula/alula-2.png"
         ],
-        "video": "main/images/alula/alula-video-1.mp4",
+        "video": "https://res.cloudinary.com/jpva3wbq/video/upload/q_auto,w_1280,ac_none,du_30/v1794406066/alula-video-1.mp4",
         "stats": [
             {"label": "Hegra UNESCO", "value": "2008"},
             {"label": "RCU Founded", "value": "2017"},

@@ -21,7 +21,7 @@
 <section class="hero">
     {% if project.video %}
         <video class="hero-media" autoplay muted loop playsinline poster="{% static project.images.0 %}">
-            <source src="{% static project.video %}" type="video/mp4">
+            <source src="{{ project.video }}" type="video/mp4">
         </video>
     {% else %}
         <img class="hero-media" src="{% static project.images.0 %}" alt="{{ project.name }}">
