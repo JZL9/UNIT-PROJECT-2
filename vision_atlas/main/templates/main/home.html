@@ -4,6 +4,10 @@
 {% block title %}{% if request.COOKIES.lang == 'ar' %}Vision Atlas | رؤية السعودية 2030{% else %}Vision Atlas | Saudi Vision 2030{% endif %}{% endblock %}
 {% block body_class %}has-hero{% endblock %}
 
+{% block extra_head %}
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+{% endblock %}
+
 {% block content %}
 
 <!-- HERO -->
@@ -72,29 +76,58 @@
 
 <!-- PROJECTS -->
 <section class="section container" id="projects">
-    {% if request.COOKIES.lang == 'ar' %}
-        <p class="section-label">02 — المشاريع العملاقة</p>
-        <h2 class="section-title mb-5">استكشف المشاريع</h2>
-    {% else %}
-        <p class="section-label">02 — Giga-Projects</p>
-        <h2 class="section-title mb-5">Explore the Projects</h2>
-    {% endif %}
+    <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+        <div>
+            {% if request.COOKIES.lang == 'ar' %}
+                <p class="section-label">02 — المشاريع العملاقة</p>
+                <h2 class="section-title mb-0">استكشف المشاريع</h2>
+            {% else %}
+                <p class="section-label">02 — Giga-Projects</p>
+                <h2 class="section-title mb-0">Explore the Projects</h2>
+            {% endif %}
+        </div>
 
-    <div class="row g-4">
-        {% for slug, project in projects.items %}
-            <div class="col-md-6 col-lg-4 reveal">
-                <a href="{% url 'main:project_detail' slug %}" class="project-card">
-                    <img src="{% static project.images.0 %}" alt="{{ project.name }}" loading="lazy">
-                    <div class="project-card-content">
-                        <span class="slide-num">{{ forloop.counter|stringformat:"02d" }}</span>
-                        <h3>{{ project.name }}</h3>
-                        <p>{{ project.tagline }}</p>
-                        <span class="project-card-link">{% if request.COOKIES.lang == 'ar' %}استكشف{% else %}Explore{% endif %} <i class="bi bi-arrow-right"></i></span>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
+        <ul class="nav view-toggle" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#map-view" type="button" role="tab">
+                    <i class="bi bi-map"></i> {% if request.COOKIES.lang == 'ar' %}الخريطة{% else %}Map{% endif %}
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#grid-view" type="button" role="tab">
+                    <i class="bi bi-grid"></i> {% if request.COOKIES.lang == 'ar' %}البطاقات{% else %}Grid{% endif %}
+                </button>
+            </li>
+        </ul>
     </div>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="map-view" role="tabpanel">
+            <div id="vision-map"
+                 data-explore="{% if request.COOKIES.lang == 'ar' %}استكشف{% else %}Explore{% endif %}"></div>
+        </div>
+
+        <div class="tab-pane fade" id="grid-view" role="tabpanel">
+            <div class="row g-4">
+                {% for slug, project in projects.items %}
+                    <div class="col-md-6 col-lg-4">
+                        <a href="{% url 'main:project_detail' slug %}" class="project-card">
+                            <img src="{% static project.images.0 %}" alt="{{ project.name }}" loading="lazy">
+                            <div class="project-card-content">
+                                <span class="slide-num">{{ forloop.counter|stringformat:"02d" }}</span>
+                                <h3>{{ project.name }}</h3>
+                                <p>{{ project.tagline }}</p>
+                                <span class="project-card-link">{% if request.COOKIES.lang == 'ar' %}استكشف{% else %}Explore{% endif %} <i class="bi bi-arrow-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {{ map_data|json_script:"map-data" }}
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
 </section>
 
 <!-- PILLARS -->
