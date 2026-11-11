@@ -80,3 +80,27 @@ if (slider) {
         });
     });
 }
+
+
+const countdown = document.querySelector('.countdown');
+
+if (countdown) {
+    const target = new Date(countdown.dataset.target);
+    const units = {
+        days: countdown.querySelector('[data-unit="days"]'),
+        hours: countdown.querySelector('[data-unit="hours"]'),
+        minutes: countdown.querySelector('[data-unit="minutes"]'),
+        seconds: countdown.querySelector('[data-unit="seconds"]'),
+    };
+
+    function updateCountdown() {
+        const diff = Math.max(0, target - new Date());
+        units.days.textContent = Math.floor(diff / 86400000);
+        units.hours.textContent = Math.floor(diff / 3600000) % 24;
+        units.minutes.textContent = Math.floor(diff / 60000) % 60;
+        units.seconds.textContent = Math.floor(diff / 1000) % 60;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}

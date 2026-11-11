@@ -933,3 +933,78 @@ html {
 [dir="rtl"] .next-overlay {
     background: linear-gradient(270deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
 }
+
+
+/* ===== Achievements ===== */
+.achieve-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    border: 1px solid var(--bs-border-color);
+    color: var(--bs-secondary-color);
+}
+
+.achieve-badge.done {
+    border-color: var(--va-accent);
+    color: var(--va-accent);
+}
+
+/* ===== Countdown ===== */
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.countdown-box {
+    padding: 2rem 1rem;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 1.5rem;
+}
+
+.countdown-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--va-accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bs-secondary-color);
+}
+
+@media (max-width: 575.98px) {
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+[dir="rtl"] .countdown-label,
+[dir="rtl"] .countdown-num {
+    letter-spacing: 0;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.achieve-badge i {
+    font-size: 1rem;
+    color: inherit;
+}
+
+[dir="rtl"] .stat-value {
+    direction: ltr;
+    text-align: right;
+}

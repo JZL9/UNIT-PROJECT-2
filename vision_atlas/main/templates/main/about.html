@@ -146,10 +146,96 @@
     </div>
 </section>
 
+<!-- ACHIEVEMENTS -->
+<section class="section container">
+    {% if request.COOKIES.lang == 'ar' %}
+        <p class="section-label">04 — الإنجازات</p>
+        <h2 class="section-title mb-2">أين وصلنا اليوم</h2>
+        <p class="story-text mb-5">بحسب التقرير السنوي لرؤية 2030 لعام 2025.</p>
+    {% else %}
+        <p class="section-label">04 — Achievements</p>
+        <h2 class="section-title mb-2">Where We Are Today</h2>
+        <p class="story-text mb-5">According to the Vision 2030 Annual Report 2025.</p>
+    {% endif %}
+    <div class="row g-4">
+        <div class="col-6 col-lg-4 reveal">
+            <div class="tech-card">
+                <span class="stat-value target-num">35%</span>
+                <p>{% if request.COOKIES.lang == 'ar' %}مشاركة المرأة في سوق العمل{% else %}Women's participation in the workforce{% endif %}</p>
+                <span class="achieve-badge done"><i class="bi bi-check-circle"></i> {% if request.COOKIES.lang == 'ar' %}تجاوز مستهدف 30%{% else %}Beat the 30% target{% endif %}</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-4 reveal">
+            <div class="tech-card">
+                <span class="stat-value target-num">7.2%</span>
+                <p>{% if request.COOKIES.lang == 'ar' %}بطالة السعوديين، الأدنى تاريخياً{% else %}Saudi unemployment, a record low{% endif %}</p>
+                <span class="achieve-badge done"><i class="bi bi-check-circle"></i> {% if request.COOKIES.lang == 'ar' %}قريب من مستهدف 7%{% else %}Close to the 7% target{% endif %}</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-4 reveal">
+            <div class="tech-card">
+                <span class="stat-value target-num">66.24%</span>
+                <p>{% if request.COOKIES.lang == 'ar' %}نسبة تملّك المساكن{% else %}Home ownership rate{% endif %}</p>
+                <span class="achieve-badge"><i class="bi bi-flag"></i> {% if request.COOKIES.lang == 'ar' %}المستهدف 70%{% else %}2030 target: 70%{% endif %}</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-4 reveal">
+            <div class="tech-card">
+                <span class="stat-value target-num">55%</span>
+                <p>{% if request.COOKIES.lang == 'ar' %}حصة الأنشطة غير النفطية من الناتج المحلي{% else %}Non-oil activities share of GDP{% endif %}</p>
+                <span class="achieve-badge done"><i class="bi bi-graph-up-arrow"></i> {% if request.COOKIES.lang == 'ar' %}أكثر من النصف{% else %}More than half{% endif %}</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-4 reveal">
+            <div class="tech-card">
+                <span class="stat-value target-num">100M+</span>
+                <p>{% if request.COOKIES.lang == 'ar' %}سائح في عام 2024{% else %}Tourists in 2024{% endif %}</p>
+                <span class="achieve-badge done"><i class="bi bi-check-circle"></i> {% if request.COOKIES.lang == 'ar' %}تجاوز المستهدف{% else %}Target exceeded{% endif %}</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-4 reveal">
+            <div class="tech-card">
+                <span class="stat-value target-num">93%</span>
+                <p>{% if request.COOKIES.lang == 'ar' %}من مؤشرات الأداء حققت مستهدفاتها في 2025{% else %}of KPIs met or beat their 2025 targets{% endif %}</p>
+                <span class="achieve-badge done"><i class="bi bi-check-circle"></i> {% if request.COOKIES.lang == 'ar' %}في المرحلة الأخيرة{% else %}Final phase{% endif %}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section container text-center">
+    {% if request.COOKIES.lang == 'ar' %}
+        <p class="section-label">05 — العد التنازلي</p>
+        <h2 class="section-title mb-5">الوقت المتبقي على 2030</h2>
+    {% else %}
+        <p class="section-label">05 — Countdown</p>
+        <h2 class="section-title mb-5">Time Left Until 2030</h2>
+    {% endif %}
+    <div class="countdown reveal" data-target="2030-01-01T00:00:00+03:00">
+        <div class="countdown-box">
+            <span class="countdown-num" data-unit="days">{{ countdown.days }}</span>
+            <span class="countdown-label">{% if request.COOKIES.lang == 'ar' %}يوم{% else %}Days{% endif %}</span>
+        </div>
+        <div class="countdown-box">
+            <span class="countdown-num" data-unit="hours">{{ countdown.hours }}</span>
+            <span class="countdown-label">{% if request.COOKIES.lang == 'ar' %}ساعة{% else %}Hours{% endif %}</span>
+        </div>
+        <div class="countdown-box">
+            <span class="countdown-num" data-unit="minutes">{{ countdown.minutes }}</span>
+            <span class="countdown-label">{% if request.COOKIES.lang == 'ar' %}دقيقة{% else %}Minutes{% endif %}</span>
+        </div>
+        <div class="countdown-box">
+            <span class="countdown-num" data-unit="seconds">{{ countdown.seconds }}</span>
+            <span class="countdown-label">{% if request.COOKIES.lang == 'ar' %}ثانية{% else %}Seconds{% endif %}</span>
+        </div>
+    </div>
+</section>
+
 <!-- MILESTONES -->
 <section class="section container">
     {% if request.COOKIES.lang == 'ar' %}
-        <p class="section-label">04 — المحطات</p>
+        <p class="section-label">06 — المحطات</p>
         <h2 class="section-title mb-4">الرحلة حتى الآن</h2>
         <ol class="timeline">
             <li class="timeline-item reveal"><span class="timeline-year">2016</span><p>الإعلان عن رؤية السعودية 2030.</p></li>
@@ -160,7 +246,7 @@
             <li class="timeline-item reveal"><span class="timeline-year">2024</span><p>فيفا يعلن استضافة المملكة لكأس العالم 2034.</p></li>
         </ol>
     {% else %}
-        <p class="section-label">04 — Milestones</p>
+        <p class="section-label">06 — Milestones</p>
         <h2 class="section-title mb-4">The Journey So Far</h2>
         <ol class="timeline">
             <li class="timeline-item reveal"><span class="timeline-year">2016</span><p>Saudi Vision 2030 is announced.</p></li>

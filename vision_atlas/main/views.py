@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from django.http import Http404
@@ -13,6 +14,8 @@ DATA_FILE = Path(__file__).resolve().parent / 'data' / 'projects.json'
 
 with open(DATA_FILE, encoding='utf-8') as f:
     PROJECTS = json.load(f)
+
+TARGET_2030 = datetime(2030, 1, 1, tzinfo=timezone(timedelta(hours=3)))
 
 def localize(project, lang):
     if lang != 'ar' or 'ar' not in project:
@@ -64,7 +67,14 @@ def set_theme(request):
     return response
 
 def about(request):
-    return render(request, 'main/about.html')
+    remaining = TARGET_2030 - datetime.now(timezone.utc)
+    countdown = {
+        'days': remaining.days,
+        'hours': remaining.seconds // 3600,
+        'minutes': (remaining.seconds % 3600) // 60,
+        'seconds': remaining.seconds % 60,
+    }
+    return render(request, 'main/about.html', {'countdown': countdown})
 
 def set_language(request):
     lang = request.GET.get('lang', 'en')
